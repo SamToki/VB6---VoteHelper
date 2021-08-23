@@ -5,7 +5,7 @@ Begin VB.Form FormMainWindow
    AutoRedraw      =   -1  'True
    BackColor       =   &H00F5F5F5&
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "VoteHelper　v1.01　by Sam Toki"
+   Caption         =   "VoteHelper v1.02eng"
    ClientHeight    =   9450
    ClientLeft      =   45
    ClientTop       =   795
@@ -83,7 +83,7 @@ Begin VB.Form FormMainWindow
    Begin VB.TextBox TextboxInput 
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
-      BackColor       =   &H00AA7700&
+      BackColor       =   &H00808080&
       BorderStyle     =   0  'None
       Enabled         =   0   'False
       BeginProperty Font 
@@ -292,7 +292,7 @@ Begin VB.Form FormMainWindow
       _cy             =   767
    End
    Begin VB.Shape ShapeProgressbar 
-      BackColor       =   &H00FF8800&
+      BackColor       =   &H00FF9000&
       BackStyle       =   1  'Opaque
       BorderColor     =   &H000000FF&
       BorderStyle     =   0  'Transparent
@@ -582,9 +582,10 @@ Begin VB.Form FormMainWindow
       Width           =   2775
    End
    Begin VB.Shape Shape6 
-      BorderColor     =   &H0000C0C0&
+      BackColor       =   &H000000FF&
+      BorderColor     =   &H0000B0B0&
       BorderWidth     =   2
-      FillColor       =   &H00C0C0C0&
+      FillColor       =   &H000000FF&
       Height          =   684
       Left            =   5376
       Top             =   6720
@@ -593,7 +594,7 @@ Begin VB.Form FormMainWindow
    Begin VB.Label LabelItemNum6 
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
-      BackColor       =   &H00C0FFFF&
+      BackColor       =   &H00B0FFFF&
       Caption         =   "6"
       BeginProperty Font 
          Name            =   "MS PGothic"
@@ -604,7 +605,7 @@ Begin VB.Form FormMainWindow
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H0000C0C0&
+      ForeColor       =   &H0000B0B0&
       Height          =   972
       Left            =   96
       TabIndex        =   8
@@ -612,45 +613,50 @@ Begin VB.Form FormMainWindow
       Width           =   876
    End
    Begin VB.Shape Shape5 
+      BackColor       =   &H000000FF&
       BorderColor     =   &H00FF00FF&
       BorderWidth     =   2
-      FillColor       =   &H00C0C0C0&
+      FillColor       =   &H000000FF&
       Height          =   684
       Left            =   5376
       Top             =   5664
       Width           =   9420
    End
    Begin VB.Shape Shape4 
-      BorderColor     =   &H00C0C000&
+      BackColor       =   &H000000FF&
+      BorderColor     =   &H00B0B000&
       BorderWidth     =   2
-      FillColor       =   &H00C0C0C0&
+      FillColor       =   &H000000FF&
       Height          =   684
       Left            =   5376
       Top             =   4608
       Width           =   9420
    End
    Begin VB.Shape Shape3 
-      BorderColor     =   &H000080FF&
+      BackColor       =   &H000000FF&
+      BorderColor     =   &H000070FF&
       BorderWidth     =   2
-      FillColor       =   &H00C0C0C0&
+      FillColor       =   &H000000FF&
       Height          =   684
       Left            =   5376
       Top             =   3552
       Width           =   9420
    End
    Begin VB.Shape Shape2 
-      BorderColor     =   &H0000C000&
+      BackColor       =   &H000000FF&
+      BorderColor     =   &H0000B000&
       BorderWidth     =   2
-      FillColor       =   &H00C0C0C0&
+      FillColor       =   &H000000FF&
       Height          =   684
       Left            =   5376
       Top             =   2496
       Width           =   9420
    End
    Begin VB.Shape Shape1 
+      BackColor       =   &H000000FF&
       BorderColor     =   &H000000FF&
       BorderWidth     =   2
-      FillColor       =   &H00C0C0C0&
+      FillColor       =   &H000000FF&
       Height          =   684
       Left            =   5376
       Top             =   1440
@@ -700,7 +706,7 @@ Begin VB.Form FormMainWindow
    Begin VB.Label LabelItemNum5 
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
-      BackColor       =   &H00FFC0FF&
+      BackColor       =   &H00FFB0FF&
       Caption         =   "5"
       BeginProperty Font 
          Name            =   "MS PGothic"
@@ -721,7 +727,7 @@ Begin VB.Form FormMainWindow
    Begin VB.Label LabelItemNum4 
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
-      BackColor       =   &H00FFFFC0&
+      BackColor       =   &H00FFFFB0&
       Caption         =   "4"
       BeginProperty Font 
          Name            =   "MS PGothic"
@@ -732,7 +738,7 @@ Begin VB.Form FormMainWindow
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00C0C000&
+      ForeColor       =   &H00B0B000&
       Height          =   972
       Left            =   96
       TabIndex        =   6
@@ -742,7 +748,7 @@ Begin VB.Form FormMainWindow
    Begin VB.Label LabelItemNum3 
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
-      BackColor       =   &H00C0E0FF&
+      BackColor       =   &H00B0D0FF&
       Caption         =   "3"
       BeginProperty Font 
          Name            =   "MS PGothic"
@@ -753,7 +759,7 @@ Begin VB.Form FormMainWindow
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H000080FF&
+      ForeColor       =   &H000070FF&
       Height          =   972
       Left            =   96
       TabIndex        =   5
@@ -763,7 +769,7 @@ Begin VB.Form FormMainWindow
    Begin VB.Label LabelItemNum2 
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
-      BackColor       =   &H00C0FFC0&
+      BackColor       =   &H00B0FFB0&
       Caption         =   "2"
       BeginProperty Font 
          Name            =   "MS PGothic"
@@ -774,7 +780,7 @@ Begin VB.Form FormMainWindow
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H0000C000&
+      ForeColor       =   &H0000B000&
       Height          =   972
       Left            =   96
       TabIndex        =   4
@@ -784,7 +790,7 @@ Begin VB.Form FormMainWindow
    Begin VB.Label LabelItemNum1 
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
-      BackColor       =   &H00C0C0FF&
+      BackColor       =   &H00B0B0FF&
       Caption         =   "1"
       BeginProperty Font 
          Name            =   "MS PGothic"
@@ -807,7 +813,7 @@ Begin VB.Form FormMainWindow
       BackStyle       =   1  'Opaque
       BorderColor     =   &H000000FF&
       BorderStyle     =   0  'Transparent
-      FillColor       =   &H00C0C0FF&
+      FillColor       =   &H00B0B0FF&
       FillStyle       =   0  'Solid
       Height          =   690
       Left            =   5370
@@ -819,7 +825,7 @@ Begin VB.Form FormMainWindow
       BackStyle       =   1  'Opaque
       BorderColor     =   &H000000FF&
       BorderStyle     =   0  'Transparent
-      FillColor       =   &H00C0FFC0&
+      FillColor       =   &H00B0FFB0&
       FillStyle       =   0  'Solid
       Height          =   690
       Left            =   5370
@@ -831,7 +837,7 @@ Begin VB.Form FormMainWindow
       BackStyle       =   1  'Opaque
       BorderColor     =   &H000000FF&
       BorderStyle     =   0  'Transparent
-      FillColor       =   &H00C0E0FF&
+      FillColor       =   &H00B0D0FF&
       FillStyle       =   0  'Solid
       Height          =   690
       Left            =   5370
@@ -843,7 +849,7 @@ Begin VB.Form FormMainWindow
       BackStyle       =   1  'Opaque
       BorderColor     =   &H000000FF&
       BorderStyle     =   0  'Transparent
-      FillColor       =   &H00FFFFC0&
+      FillColor       =   &H00FFFFB0&
       FillStyle       =   0  'Solid
       Height          =   684
       Left            =   5376
@@ -855,7 +861,7 @@ Begin VB.Form FormMainWindow
       BackStyle       =   1  'Opaque
       BorderColor     =   &H000000FF&
       BorderStyle     =   0  'Transparent
-      FillColor       =   &H00FFC0FF&
+      FillColor       =   &H00FFB0FF&
       FillStyle       =   0  'Solid
       Height          =   684
       Left            =   5376
@@ -867,149 +873,90 @@ Begin VB.Form FormMainWindow
       BackStyle       =   1  'Opaque
       BorderColor     =   &H000000FF&
       BorderStyle     =   0  'Transparent
-      FillColor       =   &H00C0FFFF&
+      FillColor       =   &H00B0FFFF&
       FillStyle       =   0  'Solid
       Height          =   684
       Left            =   5376
       Top             =   6720
       Width           =   9255
    End
-   Begin VB.Menu MenuVote 
-      Caption         =   "&Vote"
-      Begin VB.Menu MenuVoteTotalQuan 
-         Caption         =   "※　Quantity: 50"
-         Shortcut        =   {F6}
-      End
-      Begin VB.Menu MenuVote1_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuVoteStart 
-         Caption         =   "○　Start"
-         Shortcut        =   {F5}
-      End
-      Begin VB.Menu MenuVoteClear 
-         Caption         =   "＊　Clear Statistics"
-         Shortcut        =   {F7}
-      End
-      Begin VB.Menu MenuVote2_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuVoteVoteCand1 
-         Caption         =   "①　Vote for Candidate 1"
-         Enabled         =   0   'False
-         Shortcut        =   ^{F1}
-      End
-      Begin VB.Menu MenuVoteVoteCand2 
-         Caption         =   "②　Vote for Candidate 2"
-         Enabled         =   0   'False
-         Shortcut        =   ^{F2}
-      End
-      Begin VB.Menu MenuVoteVoteCand3 
-         Caption         =   "③　Vote for Candidate 3"
-         Enabled         =   0   'False
-         Shortcut        =   ^{F3}
-      End
-      Begin VB.Menu MenuVoteVoteCand4 
-         Caption         =   "④　Vote for Candidate 4"
-         Enabled         =   0   'False
-         Shortcut        =   ^{F4}
-      End
-      Begin VB.Menu MenuVoteVoteCand5 
-         Caption         =   "⑤　Vote for Candidate 5"
-         Enabled         =   0   'False
-         Shortcut        =   ^{F5}
-      End
-      Begin VB.Menu MenuVoteVoteCand6 
-         Caption         =   "⑥　Vote for Candidate 6"
-         Enabled         =   0   'False
-         Shortcut        =   ^{F6}
-      End
-   End
-   Begin VB.Menu Menu1_ 
-      Caption         =   "　|　"
-      Enabled         =   0   'False
-   End
-   Begin VB.Menu MenuSoundSwitch 
-      Caption         =   "Soun&d ON"
-   End
-   Begin VB.Menu MenuAbout 
-      Caption         =   "&About"
-      Begin VB.Menu MenuAboutName 
-         Caption         =   "VoteHelper"
-      End
-      Begin VB.Menu MenuAboutVersion 
-         Caption         =   "v1.01 Release Version　|　for Windows 7,8,10　|　English (US)"
-      End
-      Begin VB.Menu MenuAboutDate 
-         Caption         =   "Last compiled on Thu, Sep 24, 2020"
-      End
-      Begin VB.Menu MenuAboutFirst 
-         Caption         =   "First version built on Sat, Oct 21, 2017"
-      End
-      Begin VB.Menu MenuAbout1_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuAboutAuthor 
-         Caption         =   "Author: Sam Toki"
-      End
-      Begin VB.Menu MenuAboutOrganization 
-         Caption         =   "Organization: SAM TOKI STUDIO"
-      End
-      Begin VB.Menu MenuAboutFrom 
-         Caption         =   "From: Xidian University, China"
-      End
-      Begin VB.Menu MenuAboutContact 
-         Caption         =   "Contact: SamToki@outlook.com"
-      End
-      Begin VB.Menu MenuAbout2_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuAboutCopyright 
-         Caption         =   "TM ＆ (C) 2015-2020 SAM TOKI STUDIO. All rights reserved."
-      End
-      Begin VB.Menu MenuAboutTrademark 
-         Caption         =   "SAM TOKI STUDIO is a trademark of CZJ Software Technologies (CZJST) Inc. in the P.R.C and other countries."
-      End
-      Begin VB.Menu MenuAbout3_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuAboutCommercial 
-         Caption         =   "Commercial use of this software is strictly prohibited."
-      End
-   End
-   Begin VB.Menu Menu2_ 
-      Caption         =   "　|　"
-      Enabled         =   0   'False
-   End
-   Begin VB.Menu MenuLanguage 
-      Caption         =   "Ａ字あ (&L)"
-      Begin VB.Menu MenuLanguageENG 
-         Caption         =   "English (United States)"
+   Begin VB.Menu Menu 
+      Caption         =   "Menu"
+      Begin VB.Menu MenuSoundSwitch 
+         Caption         =   "Sound"
          Checked         =   -1  'True
-         Shortcut        =   +{F1}
+         Shortcut        =   {F2}
       End
-      Begin VB.Menu MenuLanguageCHS 
-         Caption         =   "中文（简体）"
-         Enabled         =   0   'False
-         Shortcut        =   +{F2}
+      Begin VB.Menu MenuEXIT 
+         Caption         =   "EXIT"
+         Shortcut        =   {F4}
       End
-      Begin VB.Menu MenuLanguageCHT 
-         Caption         =   "中文（繁體）"
-         Enabled         =   0   'False
-         Shortcut        =   +{F3}
+      Begin VB.Menu Menu1_ 
+         Caption         =   "-"
       End
-      Begin VB.Menu MenuLanguageJPN 
-         Caption         =   "日本語"
-         Enabled         =   0   'False
-         Shortcut        =   +{F4}
+      Begin VB.Menu MenuVote 
+         Caption         =   "Vote"
+         Begin VB.Menu MenuVoteStart 
+            Caption         =   "Start"
+            Shortcut        =   {F5}
+         End
+         Begin VB.Menu MenuVoteTotalQuan 
+            Caption         =   "Quantity: 50"
+            Shortcut        =   {F6}
+         End
+         Begin VB.Menu MenuVoteClear 
+            Caption         =   "Clear Statistics"
+            Shortcut        =   {F7}
+         End
+         Begin VB.Menu MenuVote1_ 
+            Caption         =   "-"
+         End
+         Begin VB.Menu MenuVoteVoteCand1 
+            Caption         =   "Vote for Candidate 1"
+            Enabled         =   0   'False
+            Shortcut        =   ^{F1}
+         End
+         Begin VB.Menu MenuVoteVoteCand2 
+            Caption         =   "Vote for Candidate 2"
+            Enabled         =   0   'False
+            Shortcut        =   ^{F2}
+         End
+         Begin VB.Menu MenuVoteVoteCand3 
+            Caption         =   "Vote for Candidate 3"
+            Enabled         =   0   'False
+            Shortcut        =   ^{F3}
+         End
+         Begin VB.Menu MenuVoteVoteCand4 
+            Caption         =   "Vote for Candidate 4"
+            Enabled         =   0   'False
+            Shortcut        =   ^{F4}
+         End
+         Begin VB.Menu MenuVoteVoteCand5 
+            Caption         =   "Vote for Candidate 5"
+            Enabled         =   0   'False
+            Shortcut        =   ^{F5}
+         End
+         Begin VB.Menu MenuVoteVoteCand6 
+            Caption         =   "Vote for Candidate 6"
+            Enabled         =   0   'False
+            Shortcut        =   ^{F6}
+         End
       End
-   End
-   Begin VB.Menu Menu3_ 
-      Caption         =   "　|　"
-      Enabled         =   0   'False
-   End
-   Begin VB.Menu MenuEXIT 
-      Caption         =   "E&XIT"
+      Begin VB.Menu Menu2_ 
+         Caption         =   "-"
+      End
+      Begin VB.Menu MenuAbout 
+         Caption         =   "About"
+         Begin VB.Menu MenuAboutGitHub 
+            Caption         =   "GitHub @SamToki"
+         End
+         Begin VB.Menu MenuAboutLicense 
+            Caption         =   "Released under license GNU GPL v3"
+         End
+         Begin VB.Menu MenuAboutCopyright 
+            Caption         =   "TM && (C) 2015-2021 SAM TOKI STUDIO"
+         End
+      End
    End
 End
 Attribute VB_Name = "FormMainWindow"
@@ -1027,15 +974,15 @@ Attribute VB_Exposed = False
 '  VoteHelper
 '
 '  Powered by Sam Toki
-'  Version: v1.00 Release Version ENG
-'  Date:    09/20/2020 (Sun.)
-'  History: First version v0.10 Beta was built on 10/21/2017.
+'  Version: v1.02eng
+'  Date:    2021/08/23 (Mon)
+'  History: First version v0.10 was built on 2017/10/21.
 '
 '  WARNING: Commercial use of this computer software is strictly prohibited.
 '           Open source license:      GNU GPL v3
 '           Creative Commons license: CC BY-NC 3.0
 '
-'  Copyright: TM & (C) 2015-2020 SAM TOKI STUDIO. All rights reserved.
+'  Copyright: TM & (C) 2015-2021 SAM TOKI STUDIO. All rights reserved.
 '             SAM TOKI STUDIO is a trademark of CZJ Software Technologies (CZJST) Inc. in the P.R.C and other countries.
 '
 '  ---------------------------------------------------------------------------------------------------------------------
@@ -1051,7 +998,6 @@ Attribute VB_Exposed = False
 Option Explicit
 
 'Declare Menu...
-Public setlanguage As String
 Public soundswitch As Boolean
 Public inputnumberdigits As Integer
 
@@ -1100,7 +1046,7 @@ Public setanimationswitch As Boolean
     Sub Form_Load()
         'Load and Initialization...
 
-        setlanguage = "ENG": soundswitch = True: inputnumberdigits = 4
+        soundswitch = True: inputnumberdigits = 4
 
         status = 0: totalquan = 50: currentquan = 0: maxquan = 0: blinkorder = 1
         itemquan1 = 0: itemquan2 = 0: itemquan3 = 0: itemquan4 = 0: itemquan5 = 0: itemquan6 = 0
@@ -1115,11 +1061,11 @@ Public setanimationswitch As Boolean
         MenuVoteVoteCand1.Enabled = False: MenuVoteVoteCand2.Enabled = False: MenuVoteVoteCand3.Enabled = False: MenuVoteVoteCand4.Enabled = False: MenuVoteVoteCand5.Enabled = False: MenuVoteVoteCand6.Enabled = False
         CmdTotalQuan.Enabled = True
         TextboxInput.Enabled = False
-        TextboxInput.BackColor = &HAA7700
+        TextboxInput.BackColor = &H808080
 
         Call Refresher: Call TimerMaxQuanBlink_Timer
 
-        MenuVoteStart.Caption = "○　Start"
+        MenuVoteStart.Caption = "Start"
         LabelStatusbar.Caption = "Welcome! Press F5 to start voting, F6 to change quantity."
     End Sub
 
@@ -1137,7 +1083,7 @@ Public setanimationswitch As Boolean
 
     Public Sub Refresher()
         'Refresh totalquan...
-        MenuVoteTotalQuan.Caption = "※　Quantity: " & totalquan
+        MenuVoteTotalQuan.Caption = "Quantity: " & totalquan
         CmdTotalQuan.Caption = totalquan
 
         'Refresh itemquan...
@@ -1170,9 +1116,9 @@ Public setanimationswitch As Boolean
             MenuVoteVoteCand1.Enabled = False: MenuVoteVoteCand2.Enabled = False: MenuVoteVoteCand3.Enabled = False: MenuVoteVoteCand4.Enabled = False: MenuVoteVoteCand5.Enabled = False: MenuVoteVoteCand6.Enabled = False
             CmdTotalQuan.Enabled = False
             TextboxInput.Enabled = False
-            TextboxInput.BackColor = &HAA7700
+            TextboxInput.BackColor = &H808080
 
-            MenuVoteStart.Caption = "○　Start"
+            MenuVoteStart.Caption = "Start"
             LabelStatusbar.Caption = "Vote finished! Press F7 to clear statistics so as to start a new vote."
 
             If soundswitch = True Then WindowsMediaPlayer1.URL = "C:\Windows\Media\Windows Print Complete.wav"
@@ -1216,18 +1162,18 @@ Public setanimationswitch As Boolean
 '[] COMMANDS []
 
     'CMD General...
-    Public Sub MenuEXIT_Click()
-        End
-    End Sub
     Public Sub MenuSoundSwitch_Click()
         Select Case soundswitch
             Case True
                 soundswitch = False
-                MenuSoundSwitch.Caption = "Soun&d OFF"
+                MenuSoundSwitch.Checked = False
             Case False
                 soundswitch = True
-                MenuSoundSwitch.Caption = "Soun&d ON"
+                MenuSoundSwitch.Checked = True
         End Select
+    End Sub
+    Public Sub MenuEXIT_Click()
+        End
     End Sub
 
     'CMD Vote...
@@ -1257,10 +1203,10 @@ Public setanimationswitch As Boolean
                 MenuVoteVoteCand1.Enabled = True: MenuVoteVoteCand2.Enabled = True: MenuVoteVoteCand3.Enabled = True: MenuVoteVoteCand4.Enabled = True: MenuVoteVoteCand5.Enabled = True: MenuVoteVoteCand6.Enabled = True
                 CmdTotalQuan.Enabled = False
                 TextboxInput.Enabled = True
-                TextboxInput.BackColor = &HFFCC55
+                TextboxInput.BackColor = &H709000
                 TextboxInput.SetFocus
 
-                MenuVoteStart.Caption = "！　Pause"
+                MenuVoteStart.Caption = "Pause"
                 LabelStatusbar.Caption = "Vote started!　" & currentquan & " / " & totalquan
             Case 1
                 status = 0
@@ -1269,9 +1215,9 @@ Public setanimationswitch As Boolean
                 MenuVoteVoteCand1.Enabled = False: MenuVoteVoteCand2.Enabled = False: MenuVoteVoteCand3.Enabled = False: MenuVoteVoteCand4.Enabled = False: MenuVoteVoteCand5.Enabled = False: MenuVoteVoteCand6.Enabled = False
                 CmdTotalQuan.Enabled = False
                 TextboxInput.Enabled = False
-                TextboxInput.BackColor = &HAA7700
+                TextboxInput.BackColor = &H808080
 
-                MenuVoteStart.Caption = "→　Resume"
+                MenuVoteStart.Caption = "Resume"
                 LabelStatusbar.Caption = "Vote paused. Press F5 to resume, F7 to abort and clear statistics."
         End Select
 
@@ -1288,9 +1234,9 @@ Public setanimationswitch As Boolean
         MenuVoteVoteCand1.Enabled = False: MenuVoteVoteCand2.Enabled = False: MenuVoteVoteCand3.Enabled = False: MenuVoteVoteCand4.Enabled = False: MenuVoteVoteCand5.Enabled = False: MenuVoteVoteCand6.Enabled = False
         CmdTotalQuan.Enabled = True
         TextboxInput.Enabled = False
-        TextboxInput.BackColor = &HAA7700
+        TextboxInput.BackColor = &H808080
 
-        MenuVoteStart.Caption = "○　Start"
+        MenuVoteStart.Caption = "Start"
         LabelStatusbar.Caption = "Statistics cleared. Press F5 to start a new vote, F6 to change quantity."
 
         If soundswitch = True Then WindowsMediaPlayer1.URL = "C:\Windows\Media\Windows Recycle.wav"
