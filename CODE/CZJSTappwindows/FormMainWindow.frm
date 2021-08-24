@@ -83,8 +83,7 @@ Begin VB.Form FormMainWindow
    Begin VB.TextBox TextboxInput 
       Alignment       =   2  'Center
       Appearance      =   0  'Flat
-      BackColor       =   &H00808080&
-      BorderStyle     =   0  'None
+      BackColor       =   &H00709000&
       Enabled         =   0   'False
       BeginProperty Font 
          Name            =   "MS PGothic"
@@ -896,17 +895,13 @@ Begin VB.Form FormMainWindow
       End
       Begin VB.Menu MenuVote 
          Caption         =   "Vote"
-         Begin VB.Menu MenuVoteStart 
+         Begin VB.Menu MenuVoteStartStopClear 
             Caption         =   "Start"
             Shortcut        =   {F5}
          End
          Begin VB.Menu MenuVoteTotalQuan 
             Caption         =   "Quantity: 50"
             Shortcut        =   {F6}
-         End
-         Begin VB.Menu MenuVoteClear 
-            Caption         =   "Clear Statistics"
-            Shortcut        =   {F7}
          End
          Begin VB.Menu MenuVote1_ 
             Caption         =   "-"
@@ -1057,15 +1052,14 @@ Public setanimationswitch As Boolean
 
         setanimationswitch = True
 
-        MenuVoteTotalQuan.Enabled = True: MenuVoteStart.Enabled = True: MenuVoteClear.Enabled = True
+        MenuVoteTotalQuan.Enabled = True
         MenuVoteVoteCand1.Enabled = False: MenuVoteVoteCand2.Enabled = False: MenuVoteVoteCand3.Enabled = False: MenuVoteVoteCand4.Enabled = False: MenuVoteVoteCand5.Enabled = False: MenuVoteVoteCand6.Enabled = False
         CmdTotalQuan.Enabled = True
         TextboxInput.Enabled = False
-        TextboxInput.BackColor = &H808080
 
         Call Refresher: Call TimerMaxQuanBlink_Timer
 
-        MenuVoteStart.Caption = "Start"
+        MenuVoteStartStopClear.Caption = "Start"
         LabelStatusbar.Caption = "Welcome! Press F5 to start voting, F6 to change quantity."
     End Sub
 
@@ -1110,16 +1104,15 @@ Public setanimationswitch As Boolean
 
         'Check if vote ends...
         If currentquan > totalquan Then
-            currentquan = totalquan: status = 0
+            currentquan = totalquan: status = 2
 
-            MenuVoteTotalQuan.Enabled = False: MenuVoteStart.Enabled = False: MenuVoteClear.Enabled = True
+            MenuVoteTotalQuan.Enabled = False
             MenuVoteVoteCand1.Enabled = False: MenuVoteVoteCand2.Enabled = False: MenuVoteVoteCand3.Enabled = False: MenuVoteVoteCand4.Enabled = False: MenuVoteVoteCand5.Enabled = False: MenuVoteVoteCand6.Enabled = False
             CmdTotalQuan.Enabled = False
             TextboxInput.Enabled = False
-            TextboxInput.BackColor = &H808080
 
-            MenuVoteStart.Caption = "Start"
-            LabelStatusbar.Caption = "Vote finished! Press F7 to clear statistics so as to start a new vote."
+            MenuVoteStartStopClear.Caption = "Clear"
+            LabelStatusbar.Caption = "Vote finished! Press F5 to clear vote."
 
             If soundswitch = True Then WindowsMediaPlayer1.URL = "C:\Windows\Media\Windows Print Complete.wav"
         End If
@@ -1193,53 +1186,45 @@ Public setanimationswitch As Boolean
         Call MenuVoteTotalQuan_Click
     End Sub
 
-    Private Sub MenuVoteStart_Click()
+    Private Sub MenuVoteStartStopClear_Click()
         Select Case status
             Case 0
                 status = 1: currentquan = 1
                 FormInputNumber.Hide
 
-                MenuVoteTotalQuan.Enabled = False: MenuVoteStart.Enabled = True: MenuVoteClear.Enabled = False
+                MenuVoteTotalQuan.Enabled = False
                 MenuVoteVoteCand1.Enabled = True: MenuVoteVoteCand2.Enabled = True: MenuVoteVoteCand3.Enabled = True: MenuVoteVoteCand4.Enabled = True: MenuVoteVoteCand5.Enabled = True: MenuVoteVoteCand6.Enabled = True
                 CmdTotalQuan.Enabled = False
                 TextboxInput.Enabled = True
-                TextboxInput.BackColor = &H709000
                 TextboxInput.SetFocus
 
-                MenuVoteStart.Caption = "Pause"
+                MenuVoteStartStopClear.Caption = "Stop"
                 LabelStatusbar.Caption = "Vote started!¡¡" & currentquan & " / " & totalquan
             Case 1
-                status = 0
+                status = 2
 
-                MenuVoteTotalQuan.Enabled = False: MenuVoteStart.Enabled = True: MenuVoteClear.Enabled = True
+                MenuVoteTotalQuan.Enabled = False
                 MenuVoteVoteCand1.Enabled = False: MenuVoteVoteCand2.Enabled = False: MenuVoteVoteCand3.Enabled = False: MenuVoteVoteCand4.Enabled = False: MenuVoteVoteCand5.Enabled = False: MenuVoteVoteCand6.Enabled = False
                 CmdTotalQuan.Enabled = False
                 TextboxInput.Enabled = False
-                TextboxInput.BackColor = &H808080
 
-                MenuVoteStart.Caption = "Resume"
-                LabelStatusbar.Caption = "Vote paused. Press F5 to resume, F7 to abort and clear statistics."
+                MenuVoteStartStopClear.Caption = "Clear"
+                LabelStatusbar.Caption = "Vote stopped. Press F5 to clear vote."
+            Case 2
+                status = 0: currentquan = 0: maxquan = 0: blinkorder = 1
+                itemquan1 = 0: itemquan2 = 0: itemquan3 = 0: itemquan4 = 0: itemquan5 = 0: itemquan6 = 0
+                itemperc1 = 0: itemperc2 = 0: itemperc3 = 0: itemperc4 = 0: itemperc5 = 0: itemperc6 = 0
+        
+                MenuVoteTotalQuan.Enabled = True
+                MenuVoteVoteCand1.Enabled = False: MenuVoteVoteCand2.Enabled = False: MenuVoteVoteCand3.Enabled = False: MenuVoteVoteCand4.Enabled = False: MenuVoteVoteCand5.Enabled = False: MenuVoteVoteCand6.Enabled = False
+                CmdTotalQuan.Enabled = True
+                TextboxInput.Enabled = False
+        
+                MenuVoteStartStopClear.Caption = "Start"
+                LabelStatusbar.Caption = "Vote cleared. Press F5 to start a new vote, F6 to change quantity."
         End Select
 
         If soundswitch = True Then WindowsMediaPlayer1.URL = "C:\Windows\Media\Windows Pop-up Blocked.wav"
-        Call Refresher
-    End Sub
-
-    Public Sub MenuVoteClear_Click()
-        status = 0: currentquan = 0: maxquan = 0: blinkorder = 1
-        itemquan1 = 0: itemquan2 = 0: itemquan3 = 0: itemquan4 = 0: itemquan5 = 0: itemquan6 = 0
-        itemperc1 = 0: itemperc2 = 0: itemperc3 = 0: itemperc4 = 0: itemperc5 = 0: itemperc6 = 0
-
-        MenuVoteTotalQuan.Enabled = True: MenuVoteStart.Enabled = True: MenuVoteClear.Enabled = True
-        MenuVoteVoteCand1.Enabled = False: MenuVoteVoteCand2.Enabled = False: MenuVoteVoteCand3.Enabled = False: MenuVoteVoteCand4.Enabled = False: MenuVoteVoteCand5.Enabled = False: MenuVoteVoteCand6.Enabled = False
-        CmdTotalQuan.Enabled = True
-        TextboxInput.Enabled = False
-        TextboxInput.BackColor = &H808080
-
-        MenuVoteStart.Caption = "Start"
-        LabelStatusbar.Caption = "Statistics cleared. Press F5 to start a new vote, F6 to change quantity."
-
-        If soundswitch = True Then WindowsMediaPlayer1.URL = "C:\Windows\Media\Windows Recycle.wav"
         Call Refresher: Call TimerMaxQuanBlink_Timer
     End Sub
 
