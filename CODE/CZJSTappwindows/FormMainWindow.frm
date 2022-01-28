@@ -5,14 +5,14 @@ Begin VB.Form FormMainWindow
    AutoRedraw      =   -1  'True
    BackColor       =   &H00F5F5F5&
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "VoteHelper v1.02eng"
+   Caption         =   "VoteHelper v1.03eng"
    ClientHeight    =   9450
    ClientLeft      =   45
    ClientTop       =   795
    ClientWidth     =   15030
    FillColor       =   &H000000FF&
    BeginProperty Font 
-      Name            =   "ËÎÌå"
+      Name            =   "Arial"
       Size            =   11.25
       Charset         =   0
       Weight          =   400
@@ -63,8 +63,8 @@ Begin VB.Form FormMainWindow
       BackColor       =   &H00FAFAFA&
       BorderStyle     =   0  'None
       BeginProperty Font 
-         Name            =   "Î¢ÈíÑÅºÚ"
-         Size            =   24.75
+         Name            =   "Microsoft YaHei UI"
+         Size            =   24
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -108,7 +108,7 @@ Begin VB.Form FormMainWindow
       BackColor       =   &H00FAFAFA&
       BorderStyle     =   0  'None
       BeginProperty Font 
-         Name            =   "Î¢ÈíÑÅºÚ"
+         Name            =   "Microsoft YaHei UI"
          Size            =   20.25
          Charset         =   0
          Weight          =   400
@@ -130,8 +130,8 @@ Begin VB.Form FormMainWindow
       BackColor       =   &H00FAFAFA&
       BorderStyle     =   0  'None
       BeginProperty Font 
-         Name            =   "Î¢ÈíÑÅºÚ"
-         Size            =   24.75
+         Name            =   "Microsoft YaHei UI"
+         Size            =   24
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -152,8 +152,8 @@ Begin VB.Form FormMainWindow
       BackColor       =   &H00FAFAFA&
       BorderStyle     =   0  'None
       BeginProperty Font 
-         Name            =   "Î¢ÈíÑÅºÚ"
-         Size            =   24.75
+         Name            =   "Microsoft YaHei UI"
+         Size            =   24
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -174,8 +174,8 @@ Begin VB.Form FormMainWindow
       BackColor       =   &H00FAFAFA&
       BorderStyle     =   0  'None
       BeginProperty Font 
-         Name            =   "Î¢ÈíÑÅºÚ"
-         Size            =   24.75
+         Name            =   "Microsoft YaHei UI"
+         Size            =   24
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -196,8 +196,8 @@ Begin VB.Form FormMainWindow
       BackColor       =   &H00FAFAFA&
       BorderStyle     =   0  'None
       BeginProperty Font 
-         Name            =   "Î¢ÈíÑÅºÚ"
-         Size            =   24.75
+         Name            =   "Microsoft YaHei UI"
+         Size            =   24
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -218,8 +218,8 @@ Begin VB.Form FormMainWindow
       BackColor       =   &H00FAFAFA&
       BorderStyle     =   0  'None
       BeginProperty Font 
-         Name            =   "Î¢ÈíÑÅºÚ"
-         Size            =   24.75
+         Name            =   "Microsoft YaHei UI"
+         Size            =   24
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -240,7 +240,7 @@ Begin VB.Form FormMainWindow
       BackColor       =   &H00FAFAFA&
       BorderStyle     =   0  'None
       BeginProperty Font 
-         Name            =   "Î¢ÈíÑÅºÚ"
+         Name            =   "Microsoft YaHei UI"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -305,7 +305,7 @@ Begin VB.Form FormMainWindow
       Appearance      =   0  'Flat
       BackColor       =   &H000000FF&
       BackStyle       =   0  'Transparent
-      Caption         =   "Quantity:"
+      Caption         =   "&Quantity:"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   18
@@ -665,7 +665,7 @@ Begin VB.Form FormMainWindow
       Appearance      =   0  'Flat
       BackColor       =   &H000000FF&
       BackStyle       =   0  'Transparent
-      Caption         =   "Press key:"
+      Caption         =   "&Press key:"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   18
@@ -880,59 +880,59 @@ Begin VB.Form FormMainWindow
       Width           =   9255
    End
    Begin VB.Menu Menu 
-      Caption         =   "Menu"
+      Caption         =   "&Menu"
       Begin VB.Menu MenuSoundSwitch 
-         Caption         =   "Sound"
+         Caption         =   "S&ound"
          Checked         =   -1  'True
          Shortcut        =   {F2}
       End
       Begin VB.Menu MenuEXIT 
-         Caption         =   "EXIT"
+         Caption         =   "E&XIT"
          Shortcut        =   {F4}
       End
       Begin VB.Menu Menu1_ 
          Caption         =   "-"
       End
       Begin VB.Menu MenuVote 
-         Caption         =   "Vote"
+         Caption         =   "&Vote"
          Begin VB.Menu MenuVoteStartStopClear 
-            Caption         =   "Start"
+            Caption         =   "&Start"
             Shortcut        =   {F5}
          End
          Begin VB.Menu MenuVoteTotalQuan 
-            Caption         =   "Quantity: 50"
+            Caption         =   "&Quantity: 50"
             Shortcut        =   {F6}
          End
          Begin VB.Menu MenuVote1_ 
             Caption         =   "-"
          End
          Begin VB.Menu MenuVoteVoteCand1 
-            Caption         =   "Vote for Candidate 1"
+            Caption         =   "Vote for Candidate &1"
             Enabled         =   0   'False
             Shortcut        =   ^{F1}
          End
          Begin VB.Menu MenuVoteVoteCand2 
-            Caption         =   "Vote for Candidate 2"
+            Caption         =   "Vote for Candidate &2"
             Enabled         =   0   'False
             Shortcut        =   ^{F2}
          End
          Begin VB.Menu MenuVoteVoteCand3 
-            Caption         =   "Vote for Candidate 3"
+            Caption         =   "Vote for Candidate &3"
             Enabled         =   0   'False
             Shortcut        =   ^{F3}
          End
          Begin VB.Menu MenuVoteVoteCand4 
-            Caption         =   "Vote for Candidate 4"
+            Caption         =   "Vote for Candidate &4"
             Enabled         =   0   'False
             Shortcut        =   ^{F4}
          End
          Begin VB.Menu MenuVoteVoteCand5 
-            Caption         =   "Vote for Candidate 5"
+            Caption         =   "Vote for Candidate &5"
             Enabled         =   0   'False
             Shortcut        =   ^{F5}
          End
          Begin VB.Menu MenuVoteVoteCand6 
-            Caption         =   "Vote for Candidate 6"
+            Caption         =   "Vote for Candidate &6"
             Enabled         =   0   'False
             Shortcut        =   ^{F6}
          End
@@ -941,15 +941,26 @@ Begin VB.Form FormMainWindow
          Caption         =   "-"
       End
       Begin VB.Menu MenuAbout 
-         Caption         =   "About"
+         Caption         =   "&About"
+         Begin VB.Menu MenuAboutDownload 
+            Caption         =   "&Download latest version..."
+         End
+         Begin VB.Menu MenuAboutUpdate 
+            Caption         =   "Check for &update manually..."
+         End
          Begin VB.Menu MenuAboutGitHub 
-            Caption         =   "GitHub @SamToki"
+            Caption         =   "&GitHub @SamToki user page..."
          End
          Begin VB.Menu MenuAboutLicense 
-            Caption         =   "Released under license GNU GPL v3"
+            Caption         =   "Released under &license GNU GPL v3..."
          End
          Begin VB.Menu MenuAboutCopyright 
-            Caption         =   "TM && (C) 2015-2021 SAM TOKI STUDIO"
+            Caption         =   "TM && (C) 2015-2022 SAM TOKI STUDIO"
+            Enabled         =   0   'False
+         End
+         Begin VB.Menu MenuAboutDate 
+            Caption         =   "2022/01/28"
+            Enabled         =   0   'False
          End
       End
    End
@@ -969,15 +980,15 @@ Attribute VB_Exposed = False
 '  VoteHelper
 '
 '  Powered by Sam Toki
-'  Version: v1.02eng
-'  Date:    2021/08/23 (Mon)
+'  Version: v1.03eng
+'  Date:    2022/01/28 (Fri)
 '  History: First version v0.10 was built on 2017/10/21.
 '
 '  WARNING: Commercial use of this computer software is strictly prohibited.
 '           Open source license:      GNU GPL v3
 '           Creative Commons license: CC BY-NC 3.0
 '
-'  Copyright: TM & (C) 2015-2021 SAM TOKI STUDIO. All rights reserved.
+'  Copyright: TM & (C) 2015-2022 SAM TOKI STUDIO. All rights reserved.
 '             SAM TOKI STUDIO is a trademark of CZJ Software Technologies (CZJST) Inc. in the P.R.C and other countries.
 '
 '  ---------------------------------------------------------------------------------------------------------------------
@@ -1034,6 +1045,12 @@ Public answer
 'Declare Others...
 Public setanimationswitch As Boolean
 
+'Declare Special...
+Private Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" _
+    (ByVal hWnd As Long, ByVal lpOperation As String, ByVal lpFile As String, _
+     ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
+Private Const SW_SHOW = 5
+
 '  ---------------------------------------------------------------------------------------------------------------------
 
 '[] LOAD []
@@ -1059,7 +1076,7 @@ Public setanimationswitch As Boolean
 
         Call Refresher: Call TimerMaxQuanBlink_Timer
 
-        MenuVoteStartStopClear.Caption = "Start"
+        MenuVoteStartStopClear.Caption = "&Start"
         LabelStatusbar.Caption = "Welcome! Press F5 to start voting, F6 to change quantity."
     End Sub
 
@@ -1077,7 +1094,7 @@ Public setanimationswitch As Boolean
 
     Public Sub Refresher()
         'Refresh totalquan...
-        MenuVoteTotalQuan.Caption = "Quantity: " & totalquan
+        MenuVoteTotalQuan.Caption = "&Quantity: " & totalquan
         CmdTotalQuan.Caption = totalquan
 
         'Refresh itemquan...
@@ -1111,7 +1128,7 @@ Public setanimationswitch As Boolean
             CmdTotalQuan.Enabled = False
             TextboxInput.Enabled = False
 
-            MenuVoteStartStopClear.Caption = "Clear"
+            MenuVoteStartStopClear.Caption = "&Clear"
             LabelStatusbar.Caption = "Vote finished! Press F5 to clear vote."
 
             If soundswitch = True Then WindowsMediaPlayer1.URL = "C:\Windows\Media\Windows Print Complete.wav"
@@ -1168,6 +1185,18 @@ Public setanimationswitch As Boolean
     Public Sub MenuEXIT_Click()
         End
     End Sub
+    Public Sub MenuAboutDownload_Click()
+        Call ShellExecute(Me.hWnd, "open", "https://github.com/SamToki/VB6---VoteHelper/raw/main/RELEASE/VoteHelper.exe", "", "", SW_SHOW)
+    End Sub
+    Public Sub MenuAboutUpdate_Click()
+        Call ShellExecute(Me.hWnd, "open", "https://github.com/SamToki/VB6---VoteHelper", "", "", SW_SHOW)
+    End Sub
+    Public Sub MenuAboutGitHub_Click()
+        Call ShellExecute(Me.hWnd, "open", "https://github.com/SamToki", "", "", SW_SHOW)
+    End Sub
+    Public Sub MenuAboutLicense_Click()
+        Call ShellExecute(Me.hWnd, "open", "https://www.gnu.org/licenses/gpl-3.0.html", "", "", SW_SHOW)
+    End Sub
 
     'CMD Vote...
     Public Sub MenuVoteTotalQuan_Click()
@@ -1198,7 +1227,7 @@ Public setanimationswitch As Boolean
                 TextboxInput.Enabled = True
                 TextboxInput.SetFocus
 
-                MenuVoteStartStopClear.Caption = "Stop"
+                MenuVoteStartStopClear.Caption = "Sto&p"
                 LabelStatusbar.Caption = "Vote started!¡¡" & currentquan & " / " & totalquan
             Case 1
                 status = 2
@@ -1208,7 +1237,7 @@ Public setanimationswitch As Boolean
                 CmdTotalQuan.Enabled = False
                 TextboxInput.Enabled = False
 
-                MenuVoteStartStopClear.Caption = "Clear"
+                MenuVoteStartStopClear.Caption = "&Clear"
                 LabelStatusbar.Caption = "Vote stopped. Press F5 to clear vote."
             Case 2
                 status = 0: currentquan = 0: maxquan = 0: blinkorder = 1
@@ -1220,7 +1249,7 @@ Public setanimationswitch As Boolean
                 CmdTotalQuan.Enabled = True
                 TextboxInput.Enabled = False
         
-                MenuVoteStartStopClear.Caption = "Start"
+                MenuVoteStartStopClear.Caption = "&Start"
                 LabelStatusbar.Caption = "Vote cleared. Press F5 to start a new vote, F6 to change quantity."
         End Select
 
